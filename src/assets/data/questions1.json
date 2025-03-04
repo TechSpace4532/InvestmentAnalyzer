@@ -1,0 +1,63 @@
+[
+    {
+      "id": "1",
+      "question": "How would you describe your investment knowledge?",
+      "options": ["Novice", "Intermediate", "Advanced"],
+      "scores": [1, 2, 3]
+    },
+    {
+      "id": "2",
+      "question": "What is your investment duration preference?",
+      "options": ["Short-term (less than 1 year)", "Medium-term (1-5 years)", "Long-term (more than 5 years)"],
+      "scores": [1, 2, 3]
+    },
+    {
+      "id": "3",
+      "question": "How comfortable are you with taking risks?",
+      "options": ["Very risk-averse", "Somewhat risk-averse", "Neutral", "Somewhat risk-tolerant", "Very risk-tolerant"],
+      "scores": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": "4",
+      "question": "What percentage of your income are you willing to invest?",
+      "options": ["Less than 10%", "10-25%", "25-50%", "More than 50%"],
+      "scores": [1, 2, 3, 4]
+    },
+    {
+      "id": "5",
+      "question": "How would you react to a sudden drop in the value of your investments?",
+      "options": ["Panic and sell immediately", "Monitor closely and consider selling", "Hold and wait for recovery", "See it as a buying opportunity and invest more"],
+      "scores": [1, 2, 3, 4]
+    },
+    {
+      "id": "6",
+      "question": "What is your primary investment goal?",
+      "options": ["Capital preservation", "Steady income", "Long-term growth", "High-risk high-reward"],
+      "scores": [1, 2, 3, 4]
+    },
+    {
+      "id": "7",
+      "question": "How often do you review your investment portfolio?",
+      "options": ["Never", "Once a year", "Every six months", "Every month"],
+      "scores": [1, 2, 3, 4]
+    },
+    {
+      "id": "8",
+      "question": "Would you prefer a guaranteed small return or a high-risk high-return option?",
+      "options": ["Guaranteed small return", "Moderate risk and return", "High risk and high return"],
+      "scores": [1, 2, 3]
+    },
+    {
+      "id": "9",
+      "question": "What portion of your investment portfolio is in high-risk assets?",
+      "options": ["None", "Less than 25%", "25-50%", "More than 50%"],
+      "scores": [1, 2, 3, 4]
+    },
+    {
+      "id": "10",
+      "question": "How do you feel about market fluctuations?",
+      "options": ["Very anxious", "Somewhat concerned", "Neutral", "Confident"],
+      "scores": [1, 2, 3, 4]
+    }
+  ]
+  
