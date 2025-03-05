@@ -1,12 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { View, Text, Button, Animated, StyleSheet, Share } from "react-native";
+import { getRiskCategory } from "../services/QuestionnaireService";
 import { Screens, Strings } from "../constants/Strings";
-
-const getRiskCategory = (score) => {
-    if (score <= 10) return Strings.lowRisk;
-    if (score <= 20) return Strings.mediumRisk;
-    return Strings.highRisk;
-};
 
 const ResultScreen = ({ route, navigation }) => {
     const { score } = route.params;

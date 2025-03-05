@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, Button, FlatList, TouchableOpacity, StyleSheet } from "react-native";
-import questionsData from "../assets/data/questions1.json";
+import { getQuestions } from "../services/QuestionDataProvider";
 import { Screens, Strings } from "../constants/Strings";
 
 const QuestionnaireScreen = ({ navigation }) => {
@@ -8,11 +8,11 @@ const QuestionnaireScreen = ({ navigation }) => {
     const [answers, setAnswers] = useState({});
 
     useEffect(() => {
-        setQuestions(questionsData);
+        setQuestions(getQuestions());
     }, []);
 
     const handleAnswer = (questionId, score) => {
-        setAnswers({ ...answers, [questionId]: score });
+        setAnswers((prevAnswers) => ({ ...prevAnswers, [questionId]: score }));
     };
 
     const calculateScore = () => {
@@ -47,8 +47,6 @@ const QuestionnaireScreen = ({ navigation }) => {
                         })}
                     </View>
                 )}
-                initialNumToRender={questions.length}
-                maxToRenderPerBatch={questions.length}
             />
             <Button title="Submit" onPress={calculateScore} disabled={Object.keys(answers).length < questions.length} />
         </View>
