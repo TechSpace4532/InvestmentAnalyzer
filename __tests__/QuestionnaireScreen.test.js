@@ -25,9 +25,9 @@ describe("Questionnaire Screen", () => {
   });
 
   test("Allows user to select an answer", () => {
-    const { getByText } = render(<QuestionnaireScreen navigation={{ navigate: jest.fn() }} />);
+    const { getByTestId } = render(<QuestionnaireScreen navigation={{ navigate: jest.fn() }} />);
+    fireEvent.press(getByTestId("option-1-0"));
     
-    fireEvent.press(getByText("Novice"));
-    expect(getByText("Novice").parent).toHaveStyle({ backgroundColor: "#4CAF50" });
+    expect(getByTestId("option-1-0")).toHaveStyle({ backgroundColor: "#4CAF50" });
   });
 });

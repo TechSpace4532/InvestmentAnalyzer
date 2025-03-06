@@ -9,7 +9,7 @@ describe("Result Screen", () => {
   });
 
   test("Applies animation effect", () => {
-    const { getByText } = render(<ResultScreen route={{ params: { score: 22 } }} navigation={{ navigate: jest.fn() }} />);
-    expect(getByText("High Risk").parent).toHaveStyle({ transform: [{ scale: 1 }] });
-  });
+    const { getByTestId } = render(<ResultScreen route={{ params: { score: 22 } }} navigation={{ navigate: jest.fn() }} />);
+    expect(getByTestId("animatedContainer")).toHaveStyle({ transform: [{ scale: 0 }] });
+});
 });

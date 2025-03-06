@@ -33,7 +33,7 @@ const ResultScreen = ({ route, navigation }) => {
             <Text style={styles.title}>{Strings.myRiskProfile}</Text>
             <Text style={styles.score}>{Strings.score}: {score}</Text>
 
-            <Animated.View style={[styles.animatedContainer, { transform: [{ scale: scaleAnim }] }]}>
+            <Animated.View testID="animatedContainer" style={[styles.animatedContainer, { transform: [{ scale: scaleAnim }] }]}>
                 <Text style={styles.category}>{riskCategory}</Text>
             </Animated.View>
 

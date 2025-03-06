@@ -38,6 +38,7 @@ const QuestionnaireScreen = ({ navigation }) => {
                             return (
                                 <TouchableOpacity
                                     key={index}
+                                    testID={`option-${item.id}-${index}`}
                                     style={[styles.option, isSelected && styles.selectedOption]}
                                     onPress={() => handleAnswer(item.id, item.scores[index])}
                                 >
