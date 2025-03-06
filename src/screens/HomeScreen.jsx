@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, StyleSheet, Image } from "react-native";
+import { View, Text, Button, StyleSheet, Image, Pressable } from "react-native";
 import { Screens, Strings } from "../constants/Strings";
 
 const HomeScreen = ({ navigation }) => {
@@ -10,15 +10,19 @@ const HomeScreen = ({ navigation }) => {
         source={require("../assets/images/invest_money.jpg")}
       />
       <Text style={styles.title}>{Strings.welcomeText}</Text>
-      <Button title={Strings.startQuestionnaire} onPress={() => navigation.navigate(Screens.questionnaire)} />
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate(Screens.questionnaire)}>
+        <Text style={styles.buttonText}>{Strings.startQuestionnaire}</Text>
+      </Pressable>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center" },
+  container: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#fff" },
   image: { width: "80%", height: 300, marginBottom: 20 },
   title: { fontSize: 24, fontWeight: "bold", marginBottom: 20 },
+  buttonStyle: { backgroundColor: "#4CAF50", padding: 15, borderRadius: 50 },
+  buttonText: { color: "#fff", fontWeight: "bold" },
 });
 
 export default HomeScreen;

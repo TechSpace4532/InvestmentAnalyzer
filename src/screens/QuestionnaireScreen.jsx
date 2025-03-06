@@ -56,7 +56,7 @@ const QuestionnaireScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-    container: { flex: 1, padding: 20 },
+    container: { flex: 1, padding: 20, backgroundColor: "#fff" },
     questionContainer: { marginBottom: 20 },
     progressContainer: { marginBottom: 10, alignItems: "center" },
     progressText: { marginTop: 5, fontSize: 14, color: "#666" },
