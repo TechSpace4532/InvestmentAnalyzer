@@ -47,6 +47,8 @@ const QuestionnaireScreen = ({ navigation }) => {
                         })}
                     </View>
                 )}
+                initialNumToRender={questions.length}
+                maxToRenderPerBatch={questions.length}
             />
             <Button title="Submit" onPress={calculateScore} disabled={Object.keys(answers).length < questions.length} />
         </View>
